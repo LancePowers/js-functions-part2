@@ -1,3 +1,56 @@
+function oldestPerson(namesAges) {
+  var oldest = 0;
+  var oldestname = " ";
+  for (var i = 0; i < namesAges.length; i++) {
+    if (namesAges[i].age > oldest){
+       oldestname = namesAges[i].name;
+       oldest = namesAges[i].age;
+    }
+
+
+  }
+ return oldestname;
+}
+
+var namesAges = [
+ {name: "Chuck", age:22},
+ {name: "Brian", age:46},
+ {name: "j.j.", age:112}
+];
+var test = namesAges[0];
+var result = oldestPerson(namesAges);
+//console.log(result);
+
+// longest word in a string function
+function longestWord(string) {
+ var longestString = ""; //sets a var to empty string
+ var longest = 0; //set variable to 0 to compare lengths
+ var arr = string.split(" "); //set a variable to create an array
+
+ //var arr2 = arr.split("");
+ for (var i = 0; i < arr.length; i++) { //loop
+   if (arr[i].length > longest){ //if index length is greater than the longest (starts at 0)
+     var noPunct = arr[i].length;
+     for (var j = 0; j < arr[i].length; j++) {
+       arr[i].charAt(j)
+     }
+     longest = arr[i].length;//resets longest
+     longestString = arr[i];
+   //compare each element and find longest one
+   }
+ }
+
+ return longestString;
+}
+
+console.log(longestWord("we are pair hhhhhhhhhhhhhhhhhhh programming!!!!!!!!!!!"));
+
+function isLetter(char){
+  var alphabet = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
+  var lowCase = char.toLowerCase();
+  console.log(lowCase);
+  
+}
 // Define a function called factorial that takes a random number as an argument and then returns the factorial of that given number.
 
 function factorial(facNum){
